@@ -4,8 +4,6 @@
 [ext_resource path="res://ClashShader.tres" type="Material" id=2]
 [ext_resource path="res://Graphics/abad.png" type="Texture" id=3]
 
-
-
 [node name="Node2D" type="Node2D"]
 scale = Vector2( 2, 2 )
 
