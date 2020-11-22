@@ -17,14 +17,13 @@ _global_script_class_icons={
 
 config/name="Clash of the Colors"
 run/main_scene="res://Scenes/Viewport.tscn"
-config/icon="res://icon.png"
 
 [display]
 
 window/size/width=512
 window/size/height=384
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/aspect="keep"
 
 [rendering]
 
