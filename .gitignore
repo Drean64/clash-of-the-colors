@@ -1,0 +1,5 @@
+.import/
+
+assets/**/*.*
+!assets/**/*.import
+!assets/**/*.tscn

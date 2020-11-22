@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Graphics/AbadiaDelCrimenLa.png" type="Texture" id=1]
+[ext_resource path="res://ClashShader.tres" type="Material" id=2]
+[ext_resource path="res://Graphics/abad.png" type="Texture" id=3]
+
+
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 2, 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+material = ExtResource( 2 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="abad" type="Sprite" parent="Sprite2"]
+material = ExtResource( 2 )
+position = Vector2( 279.591, 113.504 )
+texture = ExtResource( 3 )
