@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Clash of the Colors"
-run/main_scene="res://Scenes/Viewports.tscn"
+run/main_scene="res://Scenes/ZXSpeculum.tscn"
 
 [display]
 
