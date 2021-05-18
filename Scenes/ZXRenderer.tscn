@@ -1,8 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Resources/ZXRenderer.material" type="Material" id=1]
-[ext_resource path="res://Graphics/AbadiaDelCrimenLa.png" type="Texture" id=2]
-[ext_resource path="res://Graphics/Auto.png" type="Texture" id=3]
 [ext_resource path="res://src/ZXRenderer.gd" type="Script" id=4]
 
 [node name="ViewportContainer" type="ViewportContainer"]
@@ -13,20 +11,13 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+palette = PoolColorArray( 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0.498039, 0.498039, 0.498039, 1, 1, 0.498039, 0, 1, 0.498039, 0.247059, 0, 1, 1, 0.619608, 0.482353, 1 )
 
 [node name="Viewport" type="Viewport" parent="."]
 size = Vector2( 256, 192 )
 handle_input_locally = false
 hdr = false
 render_target_update_mode = 3
-
-[node name="Background" type="Sprite" parent="Viewport"]
-texture = ExtResource( 2 )
-centered = false
-
-[node name="Auto" type="Sprite" parent="Viewport"]
-position = Vector2( 128, 96 )
-texture = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Viewport"]
 anchor_mode = 0
