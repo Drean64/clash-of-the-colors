@@ -23,8 +23,8 @@ var attr_paper: PoolByteArray
 
 func _ready():
 	set_palette(palette)
-	attr_ink = _init_attributes("ink", 7)
-	attr_paper = _init_attributes("paper", 0)
+	attr_ink = _init_attributes("ink", 4)
+	attr_paper = _init_attributes("paper", 3)
 
 func _init_attributes(attribute_plane: String, default_color: int):
 	var attributes: PoolByteArray = PoolByteArray([])
