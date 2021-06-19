@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Graphics/AbadiaDelCrimenLa.png" type="Texture" id=1]
+[ext_resource path="res://Graphics/Auto.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Test.material" type="Material" id=3]
+[ext_resource path="res://src/game.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Test2.material" type="Material" id=5]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="AbadiaDelCrimenLa" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="AbadiaDelCrimenLa"]
+position = Vector2( 115, 31 )
+copy_mode = 2
+rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Auto" type="Sprite" parent="AbadiaDelCrimenLa/BackBufferCopy"]
+material = ExtResource( 3 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="BackBufferCopy2" type="BackBufferCopy" parent="AbadiaDelCrimenLa"]
+material = ExtResource( 3 )
+position = Vector2( 94, 46 )
+copy_mode = 2
+rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Auto2" type="Sprite" parent="AbadiaDelCrimenLa/BackBufferCopy2"]
+material = ExtResource( 5 )
+texture = ExtResource( 2 )
+centered = false

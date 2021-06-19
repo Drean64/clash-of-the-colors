@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "ZXRenderer",
 "language": "GDScript",
 "path": "res://src/ZXRenderer.gd"
+}, {
+"base": "Sprite",
+"class": "ZXprite",
+"language": "GDScript",
+"path": "res://src/ZXprite.gd"
 } ]
 _global_script_class_icons={
-"ZXRenderer": ""
+"ZXRenderer": "",
+"ZXprite": "res://Graphics/ZXprite.svg"
 }
 
 [application]

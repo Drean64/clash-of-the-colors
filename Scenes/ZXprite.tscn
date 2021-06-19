@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/ZXprite.gd" type="Script" id=1]
+
+[node name="ZXprite" type="Sprite"]
+centered = false
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Contains a B&W sprite and its ink and paper colors."
+}

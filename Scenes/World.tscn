@@ -1,15 +1,33 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Graphics/Auto.png" type="Texture" id=1]
-[ext_resource path="res://Graphics/AbadiaDelCrimenLa.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/ZXprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Graphics/Auto.png" type="Texture" id=2]
 
 [node name="World" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="AbadiaDelCrimenLa" type="Sprite" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ZXprite" parent="." instance=ExtResource( 1 )]
+position = Vector2( -20, 32 )
 texture = ExtResource( 2 )
-centered = false
+paper = 1
+ink = 6
 
-[node name="Auto" type="Sprite" parent="."]
-position = Vector2( 96, 24 )
-texture = ExtResource( 1 )
-centered = false
+[node name="ZXprite2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 12, 8 )
+texture = ExtResource( 2 )
+paper = 2
+ink = 5
+
+[node name="ZXprite3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -31, 0 )
+texture = ExtResource( 2 )
+paper = 3
+ink = 4
