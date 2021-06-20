@@ -2,7 +2,9 @@
 
 [ext_resource path="res://src/ZXprite.gd" type="Script" id=1]
 
-[node name="ZXprite" type="Sprite"]
+[node name="ZXprite" type="Sprite" groups=[
+"zxprites",
+]]
 centered = false
 script = ExtResource( 1 )
 __meta__ = {
