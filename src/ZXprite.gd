@@ -1,20 +1,16 @@
 extends Sprite
 
-class_name ZXprite, "res://Graphics/ZXprite.svg"
-
 export var paper: int = 0
 export var ink: int = 7
 
-func cellchar_bounds() -> Array:
+func cellchar_bounds() -> Rect2:
 	var rect = get_rect()
-	var r2 = [
-		int(global_position.x / 8.0),
-		int(global_position.y / 8.0),
-		0,
-		0
-		]
-	r2[2] = r2[0] + int(rect.size.x) / 8
-	r2[3] = r2[1] + int(rect.size.y) / 8
-	var g = global_position
-	return r2;
+	var rectOut: Rect2 = Rect2(
+		floor(global_position.x / 8.0),
+		floor(global_position.y / 8.0),
+		ceil((global_position.x + rect.size.x) / 8.0 ),
+		ceil((global_position.y + rect.size.y) / 8.0 )
+		)
+	return rectOut;
 
+class_name ZXprite, "res://Graphics/ZXprite.svg"

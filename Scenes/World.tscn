@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/ZXprite.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Graphics/Auto.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/til1.atlastex" type="Texture" id=3]
+[ext_resource path="res://Graphics/1.atlastex" type="Texture" id=4]
 
 [node name="World" type="Node2D"]
 
@@ -12,20 +14,20 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ZXprite1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 80, 32 )
-texture = ExtResource( 2 )
-paper = 1
-ink = 6
-
 [node name="ZXprite2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 87, 59 )
+position = Vector2( 65, 66 )
 texture = ExtResource( 2 )
 paper = 2
 ink = 5
 
 [node name="ZXprite3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 128, 64 )
-texture = ExtResource( 2 )
+position = Vector2( 111, 66 )
+texture = ExtResource( 3 )
 paper = 3
 ink = 4
+
+[node name="ZXprite1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 111, 75 )
+texture = ExtResource( 4 )
+paper = -1
+ink = -1

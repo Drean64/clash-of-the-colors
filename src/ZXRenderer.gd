@@ -22,8 +22,8 @@ export var palette: PoolColorArray = [
 
 var attr_ink: PoolByteArray
 var attr_paper: PoolByteArray
-export var paper_color: int
-export var ink_color: int
+export var paper_color: int = 0
+export var ink_color: int = 7
 
 func _init():
 	attr_ink.resize(CHARCELL_WIDTH * CHARCELL_HEIGHT)
@@ -67,12 +67,14 @@ func _process(_delta):
 	clear_attributes(paper_color, ink_color)
 	var zxprites: Array = get_tree().get_nodes_in_group("zxprites")
 	for sprite in zxprites:
-		var rect: Array = sprite.cellchar_bounds()
-		for x in range(rect[0], rect[2]+1):
-			for y in range(rect[1], rect[3]+1):
+		var rect: Rect2 = sprite.cellchar_bounds()
+		for x in range(rect.position.x, rect.size.x):
+			for y in range(rect.position.y, rect.size.y):
 				var idx: int = y*CHARCELL_WIDTH+x
-				attr_paper.set(idx, sprite.paper)
-				attr_ink.set(idx, sprite.ink)
+				if sprite.paper >= 0:
+					attr_paper.set(idx, sprite.paper)
+				if sprite.ink >= 0:
+					attr_ink.set(idx, sprite.ink)
 
 	_shade_attributes("paper", attr_paper)
 	_shade_attributes("ink", attr_ink)
