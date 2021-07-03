@@ -59,23 +59,24 @@ func _shade_attributes(attribute_plane: String, attributes: PoolByteArray):
 
 	var attr_texture = ImageTexture.new()
 	attr_texture.create_from_image(image, 0)
-	
+
 	material.set_shader_param(attribute_plane, attr_texture)
-	
+
 
 func _process(_delta):
 	clear_attributes(paper_color, ink_color)
 	var zxprites: Array = get_tree().get_nodes_in_group("zxprites")
 	for sprite in zxprites:
 		var rect: Rect2 = sprite.cellchar_bounds()
-		for x in range(rect.position.x, rect.size.x):
-			for y in range(rect.position.y, rect.size.y):
-				var idx: int = y*CHARCELL_WIDTH+x
-				if sprite.paper >= 0:
-					attr_paper.set(idx, sprite.paper)
-				if sprite.ink >= 0:
-					attr_ink.set(idx, sprite.ink)
+		if ! rect.position.x < 0:
+			for x in range(rect.position.x, rect.size.x):
+				for y in range(rect.position.y, rect.size.y):
+					var idx: int = y*CHARCELL_WIDTH+x
+					if sprite.paper >= 0:
+						attr_paper.set(idx, sprite.paper)
+					if sprite.ink >= 0:
+						attr_ink.set(idx, sprite.ink)
 
 	_shade_attributes("paper", attr_paper)
 	_shade_attributes("ink", attr_ink)
-		
+
