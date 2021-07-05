@@ -1,7 +1,6 @@
 shader_type canvas_item;
 
 const vec4 BLACK = vec4(0,0,0,1);
-const vec4 EMPTY = vec4(0,0,0,0);
 
 bool shouldStroke(sampler2D texture, vec2 uv, vec2 texPixelSize, vec2 deltaUV) {
 	vec4 pixel = texture(texture, uv + deltaUV * texPixelSize);
@@ -46,7 +45,7 @@ void fragment() {
 		vec2(-4,-4) 		
 	};
 	for( int i = 0; i < strokeChecker.length(); ++i ) {
-		if( COLOR.a < 0.5 
+		if( COLOR.a < 0.5
 			&& (int(FRAGCOORD.x) % 2 == int(FRAGCOORD.y) % 2)
 			&& shouldStroke(TEXTURE, UV, TEXTURE_PIXEL_SIZE, strokeChecker[i]) ) {
 				COLOR = BLACK;
