@@ -10,3 +10,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "Contains a B&W sprite and its ink and paper colors."
 }
+
+[node name="AttribRect" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Rect for setting color attributes."
+}

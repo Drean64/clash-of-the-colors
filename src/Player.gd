@@ -1,22 +1,22 @@
 extends KinematicBody2D
 
-var velocity: Vector2 = Vector2(0, 0)
 export var speed: float = 2.0
+export(NodePath) onready var anim = get_node(anim) as AnimationPlayer
+export(NodePath) onready var sprite = get_node(sprite) as Sprite
+var velocity: Vector2 = Vector2(0, 0)
 
 func _ready():
-	$Anim.play("idle")
+	anim.play("arthur-idle")
 
 func _physics_process(_delta):
 	if Input.is_action_pressed("ui_right"):
-		$Anim.play("walk")
-		$Anim.scale.x = 1
+		anim.play("arthur-walk-right")
 		velocity.x = speed
 	elif Input.is_action_pressed("ui_left"):
-		$Anim.play("walk")
-		$Anim.scale.x = -1
+		anim.play("arthur-walk-left")
 		velocity.x = -speed
 	else:
-		$Anim.play("idle")
+		anim.play("arthur-idle")
 		velocity.x = 0
 
 	if velocity.x:
